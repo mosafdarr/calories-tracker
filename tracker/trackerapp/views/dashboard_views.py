@@ -23,5 +23,4 @@ def dashboard(request):
         'nutrition_goal': nutrition_goal,
     }
 
-    # return render(request, 'dashboard.html', context)
-    return HttpResponse(context)
+    return render(request, 'trackerapp/dashboard.html', context)

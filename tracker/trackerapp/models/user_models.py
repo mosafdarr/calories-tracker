@@ -9,4 +9,3 @@ class UserProfile(BaseModel):
     age = models.IntegerField(null=True, blank=True)
     weight = models.FloatField(null=True, blank=True)  # in kilograms
     height = models.FloatField(null=True, blank=True)  # in centimeters
-    daily_calorie_goal = models.IntegerField(null=True, blank=True)
