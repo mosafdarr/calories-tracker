@@ -7,6 +7,8 @@ from ..forms.meals_forms import NutritionGoalForm
 
 @login_required
 def edit_profile(request):
+    if not UserProfile.objects.filter(user=request.user).exists():
+        UserProfile.objects.create(user=request.user)
     profile = UserProfile.objects.get(user=request.user)
 
     if not NutritionGoal.objects.filter(user=request.user).exists():
